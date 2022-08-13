@@ -43,7 +43,7 @@
 
 - Password Access to the Mysql Database
 
-  ![Password Access](./images/password-access.PNG)
+  ![Password Access](./images/Password-access.PNG)
 
 
 ## Step-2 : INSTALLING PHP
