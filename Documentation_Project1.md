@@ -41,3 +41,6 @@
 
 ![Mysql-password](./images/mysql-root-password.PNG)
 
+- Password Access to the Mysql Database
+![Password-Access](./images/password-Access.PNG)
+
