@@ -47,3 +47,11 @@
 
 
 ## Step-2 : INSTALLING PHP
+
+1. Install the three packages php, php-mysql (for communication between PHP and Mysql database)  and libapache2-mod-php (for Apche server to handle PHP files)
+
+- sudo apt install php libapache2-mod-php php-mysql
+- check the PHP version
+
+php -v
+![Php-version](./images/php-version.PNG)
