@@ -31,3 +31,13 @@
  ![APACHE2_On Web Browser](./images/Apache-view2.PNG)
 
 
+## Step-2 : INSTALLING MYSQL
+
+1. Install mysql server
+ - sudo apt install mysql-server and log into the MySql
+
+ ![Mysql-instalation](./images/mysql-instalation.PNG)
+ - Setting the root password for access the mysql database
+
+![Mysql-password](./images/mysql-root.password.PNG)
+
