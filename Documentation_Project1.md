@@ -43,5 +43,5 @@
 
 - Password Access to the Mysql Database
 
-  ![Password-Access](./images/password-Access.PNG)
+  ![Password-Access](./images/password-access.PNG)
 
