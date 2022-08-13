@@ -46,7 +46,7 @@
   ![Password Access](./images/Password-access.PNG)
 
 
-## Step-2 : INSTALLING PHP
+## Step-3 : INSTALLING PHP
 
 1. Install the three packages php, php-mysql (for communication between PHP and Mysql database)  and libapache2-mod-php (for Apche server to handle PHP files)
 
