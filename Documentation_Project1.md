@@ -45,3 +45,5 @@
 
   ![Password Access](./images/password-access.PNG)
 
+
+## Step-2 : INSTALLING PHP
