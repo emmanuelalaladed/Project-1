@@ -39,5 +39,5 @@
  ![Mysql-instalation](./images/mysql-instalation.PNG)
  - Setting the root password for access the mysql database
 
-![Mysql-password](./images/mysql-root.password.PNG)
+![Mysql-password](./images/mysql-root-password.PNG)
 
