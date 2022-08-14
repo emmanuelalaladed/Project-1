@@ -17,14 +17,14 @@
 -  curl http://localhost:80 or  curl http://127.0.0.1:80
 
 
-   ![Apache2_On Ubuntu shell](./images/APache_view on Ubuntu-shell.PNG)
+  
    ![APACHE2_On Ubuntu shell](./images/Apache-view1.PNG)
 
 5. Accessing the Apache2 server via brower on port 80
 
 - First retrieve the Public IP address of the Ubuntu install on the EC2 instance.
 
-  curl -s http://169.254.169.254/latest/meta-data/public-ipv4
+  *curl -s http://169.254.169.254/latest/meta-data/public-ipv4*
 
  - Web browser access to the Apache2 server
 
@@ -34,7 +34,7 @@
 ## Step-2 : INSTALLING MYSQL
 
 1. Install mysql server
- - sudo apt install mysql-server and log into the MySql
+ - *sudo apt install mysql-server and log into the MySql*
 
    ![Mysql-instalation](./images/mysql-instalation.PNG)
  - Setting the root password for access the mysql database
@@ -50,10 +50,10 @@
 
 1. Install the three packages php, php-mysql (for communication between PHP and Mysql database)  and libapache2-mod-php (for Apche server to handle PHP files)
 
-- sudo apt install php libapache2-mod-php php-mysql
+- *sudo apt install php libapache2-mod-php php-mysql*
 - check the PHP version
 
-php -v
+*php -v*
 ![Php-version](./images/php-version.PNG)
 
 
@@ -64,23 +64,23 @@ php -v
 ![Domain](./images/domain-folder.PNG)
 
 2. Creatig a new configuration file inside the Apache's sites-available directory
- - sudo vi /etc/apache2/sites-available/projectlamp.conf
+ - *sudo vi /etc/apache2/sites-available/projectlamp.conf*
 
  ![Create a conf. file](./images/conf-file.PNG)
 
  - Confirm the the created conf. file
-   sudo ls /etc/apache2/sites-available
+   *sudo ls /etc/apache2/sites-available*
 
    ![The created configuration file](./images/conf.%20file-confirmation.PNG)
 
 -  Enable the new virtual host with the command 
-   sudo a2ensite projectlamp
+   *sudo a2ensite projectlamp*
 - Disable the default website, and confirm the configuration of the have no synthax error.
 
    ![Disabling the Default website and confirming the configuration is sythax error free](./images/disable-default.PNG)
 
 - Create a new website using
-sudo echo 'Hello LAMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/html/project_lamp/index.html
+*sudo echo 'Hello LAMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/html/project_lamp/index.html*
 
 - Display the new website from the web browser using 
 
@@ -88,7 +88,39 @@ sudo echo 'Hello LAMP from hostname' $(curl -s http://169.254.169.254/latest/met
     
     ![New-Website](./images/new-website.PNG)
 
+
+ ## Step-5 :  ENABLE PHP ON THE WEBSITE
+
+ 1. In order for index.php to be the landing page for the website, the dir.conf needs to be edited.
+
+    *sudo vim /etc/apache2/mods-enabled/dir.conf*
+
+    - Edit the file as shown below
+
+    ![Edit the Dir.conf file](./images/dir.conf.PNG)
+
+    - Then reload the Apache2 server with the command
+
+      *sudo systemctl reload apache2*
+
+    - Create a new file name index.php
+
+      *vim /var/www/html/projectlamp/index.php*
+
+    - Add the following text into the new blank index.php file.
+     
+          <?php
+      phpinfo();
+
+     ![The new Websi](./images/php-content.PNG)
+
+     2. Launch the new PHP website from the web browser
+
+       ![The new PHP website](./images/php-website-new.PNG)
+
     
- 
+
+       
    
+
 
