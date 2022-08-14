@@ -55,3 +55,40 @@
 
 php -v
 ![Php-version](./images/php-version.PNG)
+
+
+## Step-4 : CREATING A VIRTUAL HOST FOR YOUR WEBSITE USING APACHE
+
+1. Create a domain directory and change the ownership.
+
+![Domain](./images/domain-folder.PNG)
+
+2. Creatig a new configuration file inside the Apache's sites-available directory
+ - sudo vi /etc/apache2/sites-available/projectlamp.conf
+
+ ![Create a conf. file](./images/conf-file.PNG)
+
+ - Confirm the the created conf. file
+   sudo ls /etc/apache2/sites-available
+
+   ![The created configuration file](./images/conf.%20file-confirmation.PNG)
+
+-  Enable the new virtual host with the command 
+   sudo a2ensite projectlamp
+- Disable the default website, and confirm the configuration of the have no synthax error.
+
+   ![Disabling the Default website and confirming the configuration is sythax error free](./images/disable-default.PNG)
+
+- Create a new website using
+sudo echo 'Hello LAMP from hostname' $(curl -s http://169.254.169.254/latest/meta-data/public-hostname) 'with public IP' $(curl -s http://169.254.169.254/latest/meta-data/public-ipv4) > /var/www/html/project_lamp/index.html
+
+- Display the new website from the web browser using 
+
+    http://44.202.1.98
+    
+    ![New-Website](./images/new-website.PNG)
+
+    
+ 
+   
+
