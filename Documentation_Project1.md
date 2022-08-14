@@ -114,7 +114,7 @@
 
      ![The new Websi](./images/php-content.PNG)
 
-     2. Launch the new PHP website from the web browser
+2.  Launch the new PHP website from the web browser
 
        ![The new PHP website](./images/php-website-new.PNG)
 
