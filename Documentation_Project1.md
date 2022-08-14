@@ -3,18 +3,18 @@
 ##  Step-1 : Installing APACHE and updating the Firewall
 
 1. Update the Ubuntu package manager
-- sudo apt update
+- *sudo apt update*
 
 2. Install Apache server
-- sudo apt install apache2
+- *sudo apt install apache2*
 
 3. Verify the installed apache2 server
-- sudo systemctl status apache2
+- *sudo systemctl status apache2*
 
   ![APACHE2_Status](./images/APache2-status.PNG)
 
 4. Accessing the Apache2 server on the Ubuntu shell 
--  curl http://localhost:80 or  curl http://127.0.0.1:80
+-  *curl http://localhost:80 or  curl http://127.0.0.1:80*
 
 
   
@@ -64,11 +64,13 @@
 ![Domain](./images/domain-folder.PNG)
 
 2. Creatig a new configuration file inside the Apache's sites-available directory
+
  - *sudo vi /etc/apache2/sites-available/projectlamp.conf*
 
  ![Create a conf. file](./images/conf-file.PNG)
 
  - Confirm the the created conf. file
+ 
    *sudo ls /etc/apache2/sites-available*
 
    ![The created configuration file](./images/conf.%20file-confirmation.PNG)
